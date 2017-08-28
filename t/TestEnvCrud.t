@@ -4,18 +4,9 @@ use strict;
 use warnings 'FATAL';
 
 use Path::Class;
-use Test::More tests => 3;
+use Test::More tests => 2;
 
 use TestEnvCrud;
-
-subtest 'paths' => sub{
-    plan tests => 2;
-
-    my $current_repo_path = TestEnv->current_repo_path;
-    isa_ok($current_repo_path, 'Path::Class::Dir', 'current_repo_path set');
-    ok(-d "$current_repo_path", 'current_repo_path exists');
-
-};
 
 subtest 'ENVs' => sub{
     plan tests => 2;
