@@ -4,7 +4,6 @@ use strict;
 use warnings;
 
 use Path::Class;
-use Sys::Hostname;
 use UR;
 
 INIT { # runs after compilation, right before execution
@@ -22,8 +21,6 @@ INIT { # runs after compilation, right before execution
 USE
     eval $use;
     die "FATAL: $@" if $@;
-
-    printf(STDERR "***** TEST ENV on %s *****\n", Sys::Hostname::hostname);
 }
 
 class Test::Job {
