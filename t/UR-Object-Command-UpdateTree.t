@@ -5,7 +5,7 @@ use warnings 'FATAL';
 
 use Path::Class;
 use lib file(__FILE__)->dir->parent->subdir('lib')->absolute->stringify;
-use TestEnvCrud;
+use TestCrudClasses;
 
 use Test::More tests => 1;
 
