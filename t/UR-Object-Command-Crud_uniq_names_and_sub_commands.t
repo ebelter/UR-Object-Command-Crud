@@ -26,7 +26,7 @@ subtest 'unique names and classes' => sub{
         target_class => 'Test::Muppet',
     );
 
-    my $pkg = 'Test::Muppet::Command';
+    $pkg = 'Test::Muppet::Command';
     ok(UR::Object::Type->get($pkg), 'muppet tree command exists'),
     is_deeply(
         [ $pkg->sub_command_names ],
