@@ -3,9 +3,6 @@ perl:
   - "5.12"
 env:
   - COVERAGE=1
-install:
-  - cpan-install --deps       # installs prereqs, including recommends
-  - cpan-install --coverage   # installs converage prereqs, if enabled
 before_script:
   - coverage-setup
 after_success:
